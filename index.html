@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PlayLab — практические задания по разработке игр и игровой анимации">
+    <title>PlayLab — практика разработки игр</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body class="page">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <!-- Общий блок шапки используется на трёх страницах -->
+    <header class="site-header">
+      <div class="site-header__inner container">
+        <a class="brand" href="index.html" aria-label="PlayLab — главная страница">PlayLab</a>
+        <button
+          class="site-header__toggle"
+          type="button"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+          hidden
+        >
+          Меню
+        </button>
+        <nav class="site-header__nav" id="main-navigation" aria-label="Основная навигация">
+          <a class="site-header__link site-header__link_current" href="index.html" aria-current="page">
+            Главная
+          </a>
+          <a class="site-header__link" href="practice.html">Практика</a>
+          <a class="site-header__link" href="about.html">О проекте</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__inner container">
+          <div class="hero__content">
+            <p class="eyebrow">Скрипты · Анимация · Игровые механики</p>
+            <h1 class="hero__title" id="hero-title">
+              Создавайте игры <span class="hero__accent">шаг за шагом</span>
+            </h1>
+            <p class="hero__text">
+              Небольшие задания для практики разработки игр. Выберите упражнение, соберите работающий
+              результат и проверьте его
+            </p>
+            <div class="hero__actions">
+              <a class="button button_theme_primary" href="practice.html">Выбрать задание</a>
+              <a class="button button_theme_outline" href="about.html">О проекте</a>
+            </div>
+            <a class="hero__next" href="#directions">Посмотреть направления</a>
+          </div>
+          <figure class="world hero__visual">
+            <img
+              class="world__image"
+              src="assets/island.png"
+              width="1448"
+              height="1086"
+              alt="Низкополигональный игровой остров с деревьями, дорожкой и светящимся порталом"
+              fetchpriority="high"
+            >
+          </figure>
+        </div>
+      </section>
+
+      <section class="directions" id="directions" aria-labelledby="directions-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">01 / Направления</p>
+            <h2 class="section-heading__title" id="directions-title">Один проект<br>разные навыки</h2>
+            <p class="section-heading__text">
+              Поведение объектов, движения персонажей и правила игры можно изучать через отдельные небольшие
+              задачи
+            </p>
+          </div>
+          <div class="directions__grid">
+            <article class="direction">
+              <span class="direction__number" aria-hidden="true">01</span>
+              <h3 class="direction__title">Скрипты</h3>
+              <p class="direction__text">
+                Работа с событиями, состоянием объектов и интерфейсом. Начните с двери или игрового таймера
+              </p>
+              <a class="direction__link" href="practice.html#doors">Задания по скриптам</a>
+            </article>
+
+            <article class="direction">
+              <span class="direction__number" aria-hidden="true">02</span>
+              <h3 class="direction__title">Анимация</h3>
+              <p class="direction__text">
+                Поза, ритм и движение персонажа. Попробуйте собрать цикл ходьбы или короткий прыжок
+              </p>
+              <a class="direction__link" href="practice.html#walk">Задания по анимации</a>
+            </article>
+
+            <article class="direction">
+              <span class="direction__number" aria-hidden="true">03</span>
+              <h3 class="direction__title">Игровые механики</h3>
+              <p class="direction__text">
+                Условия победы, сбор предметов и обратная связь. Объедините несколько действий в простую игру
+              </p>
+              <a class="direction__link" href="practice.html#coins">Задания по механикам</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured" aria-labelledby="featured-title">
+        <div class="container">
+          <div class="section-heading section-heading_layout_split">
+            <div>
+              <p class="eyebrow">02 / Первые упражнения</p>
+              <h2 class="section-heading__title" id="featured-title">Начните с малого</h2>
+            </div>
+            <a class="button button_theme_outline button_size_small" href="practice.html">Все задания</a>
+          </div>
+          <div class="featured__grid">
+            <!-- Модификатор меняет оформление карточки, сохраняя базовый блок -->
+            <article class="exercise-card exercise-card_featured">
+              <div class="exercise-card__top">
+                <span class="exercise-card__number" aria-hidden="true">01</span>
+                <span class="tag">Скрипты</span>
+              </div>
+              <h3 class="exercise-card__title">Система дверей</h3>
+              <p class="exercise-card__text">
+                Дверь открывается после взаимодействия и сохраняет своё состояние
+              </p>
+              <a
+                class="exercise-card__link"
+                href="practice.html#doors"
+                aria-label="Открыть задание Система дверей"
+              >
+                Открыть задание
+              </a>
+            </article>
+
+            <article class="exercise-card">
+              <div class="exercise-card__top">
+                <span class="exercise-card__number" aria-hidden="true">02</span>
+                <span class="tag">Скрипты</span>
+              </div>
+              <h3 class="exercise-card__title">Игровой таймер</h3>
+              <p class="exercise-card__text">Обратный отсчёт показывает оставшееся время и завершает раунд</p>
+              <a
+                class="exercise-card__link"
+                href="practice.html#timer"
+                aria-label="Открыть задание Игровой таймер"
+              >
+                Открыть задание
+              </a>
+            </article>
+
+            <article class="exercise-card">
+              <div class="exercise-card__top">
+                <span class="exercise-card__number" aria-hidden="true">03</span>
+                <span class="tag tag_theme_animation">Анимация</span>
+              </div>
+              <h3 class="exercise-card__title">Цикл ходьбы</h3>
+              <p class="exercise-card__text">
+                Плавный повтор движения без заметного перехода между началом и концом
+              </p>
+              <a
+                class="exercise-card__link"
+                href="practice.html#walk"
+                aria-label="Открыть задание Цикл ходьбы"
+              >
+                Открыть задание
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="roadmap" aria-labelledby="roadmap-title">
+        <div class="roadmap__inner container">
+          <div class="roadmap__intro section-heading">
+            <p class="eyebrow">03 / Порядок работы</p>
+            <h2 class="section-heading__title" id="roadmap-title">От условия<br>до результата</h2>
+            <p class="roadmap__text">
+              Завершённое небольшое упражнение помогает увидеть, что уже получается и над чем нужно поработать
+            </p>
+            <a class="button button_theme_primary" href="practice.html">Перейти к практике</a>
+          </div>
+          <ol class="roadmap__steps">
+            <li class="roadmap__step">
+              <span class="roadmap__number" aria-hidden="true">01</span>
+              <div>
+                <h3 class="roadmap__title">Определите результат</h3>
+                <p class="roadmap__description">
+                  Прочитайте условие и запишите, что должно происходить после действия игрока
+                </p>
+              </div>
+            </li>
+
+            <li class="roadmap__step">
+              <span class="roadmap__number" aria-hidden="true">02</span>
+              <div>
+                <h3 class="roadmap__title">Соберите основной вариант</h3>
+                <p class="roadmap__description">
+                  Сначала реализуйте нужное поведение, затем добавьте оформление и дополнительные эффекты
+                </p>
+              </div>
+            </li>
+
+            <li class="roadmap__step">
+              <span class="roadmap__number" aria-hidden="true">03</span>
+              <div>
+                <h3 class="roadmap__title">Проверьте поведение</h3>
+                <p class="roadmap__description">
+                  Повторите действия несколько раз и проверьте пограничные случаи: нулевое время, повторное
+                  нажатие, завершённый раунд
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner container">
+        <a class="brand" href="index.html">PlayLab</a>
+        <p class="site-footer__text">Практика разработки игр и анимации</p>
+        <nav class="site-footer__nav" aria-label="Навигация в подвале">
+          <a class="site-footer__link" href="practice.html">Практика</a>
+          <a class="site-footer__link" href="about.html">О проекте</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

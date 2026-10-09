@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="О PlayLab: самостоятельная практика разработки игр и анимации, работа с заданиями и проверка результата"
+    >
+    <title>О проекте — PlayLab</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body class="page page_theme_light">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <header class="site-header">
+      <div class="site-header__inner container">
+        <a class="brand" href="index.html" aria-label="PlayLab — главная страница">PlayLab</a>
+        <button
+          class="site-header__toggle"
+          type="button"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+          hidden
+        >
+          Меню
+        </button>
+        <nav class="site-header__nav" id="main-navigation" aria-label="Основная навигация">
+          <a class="site-header__link" href="index.html">Главная</a>
+          <a class="site-header__link" href="practice.html">Практика</a>
+          <a class="site-header__link site-header__link_current" href="about.html" aria-current="page">
+            О проекте
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="about container" id="main">
+      <section class="about__intro" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">Самостоятельная практика</p>
+          <h1 class="section-heading__title section-heading__title_large" id="about-title">О проекте</h1>
+        </div>
+        <p class="about__lead">PlayLab — учебный сайт с небольшими заданиями по разработке игр и анимации</p>
+        <p class="about__text">
+          Задания помогают переходить от знакомства с инструментами к самостоятельной работе. Для каждого
+          упражнения указан результат, который нужно получить, и несколько условий для его проверки
+        </p>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <div class="section-heading">
+          <p class="eyebrow">Работа с заданиями</p>
+          <h2 class="section-heading__title" id="approach-title">Сначала поведение<br>затем детали</h2>
+        </div>
+        <div class="approach__grid">
+          <article class="approach__item">
+            <span class="approach__number" aria-hidden="true">01</span>
+            <h3 class="approach__title">Ограничьте задачу</h3>
+            <p class="approach__text">
+              Определите минимальный результат. Для двери это открытие и закрытие, для анимации ходьбы —
+              непрерывный цикл
+            </p>
+          </article>
+
+          <article class="approach__item">
+            <span class="approach__number" aria-hidden="true">02</span>
+            <h3 class="approach__title">Проверьте основу</h3>
+            <p class="approach__text">
+              Убедитесь, что основное действие работает несколько раз подряд. Затем добавляйте эффекты и
+              улучшайте оформление
+            </p>
+          </article>
+
+          <article class="approach__item">
+            <span class="approach__number" aria-hidden="true">03</span>
+            <h3 class="approach__title">Запишите выводы</h3>
+            <p class="approach__text">
+              Отметьте, что получилось сделать самостоятельно, где возникли сложности и что нужно изучить
+              перед следующим упражнением
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">Перед началом</p>
+          <h2 class="section-heading__title" id="faq-title">Частые вопросы</h2>
+        </div>
+
+        <details class="faq__item">
+          <summary class="faq__question">Для какого уровня подходят задания?</summary>
+          <p class="faq__answer">
+            Для начала достаточно понимать основные действия в выбранном редакторе. Если упражнение кажется
+            сложным, разделите его на несколько частей и выполните их по очереди
+          </p>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">В каком инструменте выполнять упражнения?</summary>
+          <p class="faq__answer">
+            Для игровых механик можно использовать Roblox Studio или другой игровой движок. Для анимации
+            подойдёт Blender или встроенный редактор анимаций
+          </p>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">Как понять, что работа завершена?</summary>
+          <p class="faq__answer">
+            Проверьте критерии в условии задания. Основной результат должен работать стабильно, а повторные
+            действия не должны приводить к ошибкам
+          </p>
+        </details>
+      </section>
+
+      <div class="invitation">
+        <div>
+          <h2 class="invitation__title">Выберите первое упражнение</h2>
+          <p class="invitation__text">Начните с задачи, результат которой можно проверить</p>
+        </div>
+        <a class="button button_theme_dark" href="practice.html">Открыть задания</a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner container">
+        <a class="brand" href="index.html">PlayLab</a>
+        <p class="site-footer__text">Практика разработки игр и анимации</p>
+        <nav class="site-footer__nav" aria-label="Навигация в подвале">
+          <a class="site-footer__link" href="index.html">Главная</a>
+          <a class="site-footer__link" href="practice.html">Практика</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Практические задания PlayLab: скрипты, игровые механики и анимация персонажей"
+    >
+    <title>Практика — PlayLab</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body class="page">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <header class="site-header">
+      <div class="site-header__inner container">
+        <a class="brand" href="index.html" aria-label="PlayLab — главная страница">PlayLab</a>
+        <button
+          class="site-header__toggle"
+          type="button"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+          hidden
+        >
+          Меню
+        </button>
+        <nav class="site-header__nav" id="main-navigation" aria-label="Основная навигация">
+          <a class="site-header__link" href="index.html">Главная</a>
+          <a class="site-header__link site-header__link_current" href="practice.html" aria-current="page">
+            Практика
+          </a>
+          <a class="site-header__link" href="about.html">О проекте</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="catalog container" id="main">
+      <div class="section-heading">
+        <p class="eyebrow">Задания для самостоятельной работы</p>
+        <h1 class="section-heading__title section-heading__title_large">Практика</h1>
+        <p class="section-heading__text">
+          Шесть небольших заданий по скриптам и анимации. У каждого есть цель и критерии проверки
+        </p>
+      </div>
+
+      <div class="catalog__grid">
+        <article class="exercise-card" id="doors">
+          <div class="exercise-card__top">
+            <span class="exercise-card__number" aria-hidden="true">01</span>
+            <span class="tag">Скрипты</span>
+          </div>
+          <h2 class="exercise-card__title">Система дверей</h2>
+          <p class="exercise-card__text">
+            Создайте дверь, которая открывается после взаимодействия и закрывается при повторном действии
+          </p>
+
+          <details class="exercise-card__details">
+            <summary class="exercise-card__summary">Условие и проверка</summary>
+            <div class="exercise-card__instructions">
+              <p class="exercise-card__instruction">
+                Храните состояние двери отдельно от её положения. Во время движения отклоняйте повторные
+                команды
+              </p>
+              <ul class="exercise-card__checks">
+                <li>Дверь открывается и закрывается</li>
+                <li>Несколько быстрых нажатий не ломают движение</li>
+                <li>Состояние соответствует положению двери</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <article class="exercise-card" id="timer">
+          <div class="exercise-card__top">
+            <span class="exercise-card__number" aria-hidden="true">02</span>
+            <span class="tag">Скрипты</span>
+          </div>
+          <h2 class="exercise-card__title">Игровой таймер</h2>
+          <p class="exercise-card__text">
+            Покажите обратный отсчёт в интерфейсе и завершите раунд, когда время закончится
+          </p>
+
+          <details class="exercise-card__details">
+            <summary class="exercise-card__summary">Условие и проверка</summary>
+            <div class="exercise-card__instructions">
+              <p class="exercise-card__instruction">
+                Добавьте запуск и сброс таймера. Разделите отсчёт времени и обновление текста в интерфейсе
+              </p>
+              <ul class="exercise-card__checks">
+                <li>Таймер останавливается на нуле</li>
+                <li>Повторный запуск не создаёт два отсчёта</li>
+                <li>Сброс возвращает начальное время</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <article class="exercise-card" id="walk">
+          <div class="exercise-card__top">
+            <span class="exercise-card__number" aria-hidden="true">03</span>
+            <span class="tag tag_theme_animation">Анимация</span>
+          </div>
+          <h2 class="exercise-card__title">Цикл ходьбы</h2>
+          <p class="exercise-card__text">
+            Соберите повторяющуюся анимацию ходьбы с плавным переходом от последнего кадра к первому
+          </p>
+
+          <details class="exercise-card__details">
+            <summary class="exercise-card__summary">Условие и проверка</summary>
+            <div class="exercise-card__instructions">
+              <p class="exercise-card__instruction">
+                Начните с опорных поз, затем добавьте перенос веса, движение рук и промежуточные кадры
+              </p>
+              <ul class="exercise-card__checks">
+                <li>В месте повторения нет резкого скачка</li>
+                <li>Руки и ноги двигаются согласованно</li>
+                <li>Опорная стопа не скользит по земле</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <article class="exercise-card" id="coins">
+          <div class="exercise-card__top">
+            <span class="exercise-card__number" aria-hidden="true">04</span>
+            <span class="tag tag_theme_mechanics">Механика</span>
+          </div>
+          <h2 class="exercise-card__title">Сбор монет</h2>
+          <p class="exercise-card__text">
+            Разместите монеты на уровне, добавьте счётчик и условие победы после сбора всех предметов
+          </p>
+
+          <details class="exercise-card__details">
+            <summary class="exercise-card__summary">Условие и проверка</summary>
+            <div class="exercise-card__instructions">
+              <p class="exercise-card__instruction">
+                Каждая монета должна учитываться один раз. После сбора последней монеты покажите результат
+              </p>
+              <ul class="exercise-card__checks">
+                <li>Повторное касание не добавляет очки</li>
+                <li>Счётчик соответствует собранным монетам</li>
+                <li>Победа наступает после сбора всех монет</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <article class="exercise-card" id="jump">
+          <div class="exercise-card__top">
+            <span class="exercise-card__number" aria-hidden="true">05</span>
+            <span class="tag tag_theme_animation">Анимация</span>
+          </div>
+          <h2 class="exercise-card__title">Прыжок персонажа</h2>
+          <p class="exercise-card__text">
+            Создайте короткую анимацию с подготовкой к прыжку, полётом и приземлением
+          </p>
+
+          <details class="exercise-card__details">
+            <summary class="exercise-card__summary">Условие и проверка</summary>
+            <div class="exercise-card__instructions">
+              <p class="exercise-card__instruction">
+                Разделите движение на фазы и подберите длительность каждой. Добавьте реакцию тела на
+                приземление
+              </p>
+              <ul class="exercise-card__checks">
+                <li>Подготовка читается до отрыва от земли</li>
+                <li>Скорость движения меняется по фазам</li>
+                <li>Приземление заканчивается устойчивой позой</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <article class="exercise-card" id="finish">
+          <div class="exercise-card__top">
+            <span class="exercise-card__number" aria-hidden="true">06</span>
+            <span class="tag tag_theme_mechanics">Механика</span>
+          </div>
+          <h2 class="exercise-card__title">Условия победы</h2>
+          <p class="exercise-card__text">
+            Откройте выход только после выполнения нужных действий и завершите игру при достижении финиша
+          </p>
+
+          <details class="exercise-card__details">
+            <summary class="exercise-card__summary">Условие и проверка</summary>
+            <div class="exercise-card__instructions">
+              <p class="exercise-card__instruction">
+                Храните список выполненных действий и проверяйте его при попытке пройти через выход
+              </p>
+              <ul class="exercise-card__checks">
+                <li>До выполнения условий выход закрыт</li>
+                <li>После выполнения условий можно победить</li>
+                <li>Победа обрабатывается один раз</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+      </div>
+
+      <div class="catalog__note">
+        <p class="catalog__text">
+          После выполнения проверьте результат по каждому пункту. Если что-то работает нестабильно, уменьшите
+          задачу и найдите причину
+        </p>
+        <a class="button button_theme_outline button_size_small" href="about.html#approach">
+          Как работать с заданиями
+        </a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner container">
+        <a class="brand" href="index.html">PlayLab</a>
+        <p class="site-footer__text">Практика разработки игр и анимации</p>
+        <nav class="site-footer__nav" aria-label="Навигация в подвале">
+          <a class="site-footer__link" href="index.html">Главная</a>
+          <a class="site-footer__link" href="about.html">О проекте</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
